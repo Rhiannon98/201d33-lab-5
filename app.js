@@ -105,14 +105,18 @@ function sumArray(testArray) { //eslint-disable-line
 
   for (var i = 0 ; i < testArray.length ; i++) {
     counter = sum(counter, testArray[i])[0];
+    console.log (counter);
   }
 
-  var sumArrayString = testArray.toString + ' was passed in as an array of numbers, and ' + 9 + ' is their sum.';
+  var sumArrayString = testArray.toString() + ' was passed in as an array of numbers, and ' + counter + ' is their sum.';
 
-  return [sumArray, sumArrayString];
+  console.log('john says', sumArrayString);
+
+  return [counter, sumArrayString];
 }
 
 console.log(sumArray);
+
 // Here is the test for sumArray(); uncomment it to run it
 
 testSumArray(testArray);
