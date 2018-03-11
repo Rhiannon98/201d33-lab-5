@@ -119,7 +119,7 @@ console.log(sumArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+// testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -134,11 +134,33 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+// var testArray = [2, 3, 4]
 function multiplyArray(testArray) { //eslint-disable-line
 
+  //establish a counter
+  var product = 1;
+
+  // * all the #'s in the array
+  // use a for loop to set boundaries
+  // use multiply() to replace counter = counter * array[i]
+
+  for (var i = 0 ; i < testArray.length ; i++) {
+    product = multiply(product, testArray[i])[0];
+    console.log (product);
+  }
+
+  var multiplyArrayString = 'The numbers ' + testArray.toString() + ' have a product of ' + product + '.';
+
+  console.log('rhi says: ', multiplyArrayString);
+
+  return [product, multiplyArrayString];
 }
 
+console.log(multiplyArray);
+
+
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
